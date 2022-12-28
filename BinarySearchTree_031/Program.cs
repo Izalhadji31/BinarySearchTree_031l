@@ -84,6 +84,21 @@ namespace BinarySearchTree_031
 
         public void preorder(Node ptr)
         {
+            if(ROOT == null)
+            {
+                Console.WriteLine("Tree is Empty");
+                return ;
+            }
+            if(ptr != null)
+            {
+                Console.WriteLine(ptr.info + "");
+                preorder(ptr.leftchild);
+                preorder(ptr.rightchild);
+            }
+        }
+         
+        public void postorder(Node ptr)
+        {
 
         }
         static void Main(string[] args)
