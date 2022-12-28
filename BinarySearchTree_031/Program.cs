@@ -44,5 +44,9 @@ namespace BinarySearchTree_031
                     currentNode = currentNode.rightchild;
             }
         }
+        public void insert(string elemnt)/* Insert a node in the binary search tree*/
+        {
+
+        }
     }
 }
