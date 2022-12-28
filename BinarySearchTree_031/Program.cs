@@ -24,6 +24,25 @@ namespace BinarySearchTree_031
 
     class program
     {
-
+        public Node ROOT;
+        public program()
+        {
+            ROOT = null; /*intializing ROOT to null*/
+        }
+        public void search(string element, ref Node parent, ref Node currentNode)
+        {
+            /* This function search the currentNode of the specified Node as sell
+             as the current Node of its parents*/
+            currentNode = ROOT;
+            parent = null;
+            while((currentNode != null) && (currentNode.info != element))
+            {
+                parent = currentNode;
+                if(String.Compare(element, currentNode.info) <0)
+                    currentNode = currentNode.leftchild;
+                else
+                    currentNode = currentNode.rightchild;
+            }
+        }
     }
 }
