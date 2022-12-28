@@ -99,11 +99,25 @@ namespace BinarySearchTree_031
          
         public void postorder(Node ptr)
         {
-
+            if(ROOT == null)
+            {
+                Console.WriteLine("Tree is Empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postorder(ptr.leftchild);
+                postorder(ptr.rightchild);
+                Console.WriteLine(ptr.ToString info + "");
+            }
         }
         static void Main(string[] args)
         {
-
+            program x = new program();
+            while (true)
+            {
+                Console
+            }
         }
     }
 }
